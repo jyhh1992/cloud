@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> -->
+  <script src="./js/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=	&callback=initMap" async defer></script>    
+  <script>
+    $(document).ready(function(){
+      $('.bxslider').bxSlider({
+        auto: true,
+        autoControls: true,
+        stopAutoOnClick: true,
+        pager: true,
+        slideWidth: 1000
+      });
+    });  
+  </script>
+  <style>
+    body{
+      width:1000px;
+      margin:0 auto;
+    }
+    div#map{
+      width:500px;
+      height:500px;
+    }
+  </style>
+</head>
+<body>
+  <!-- 참고:https://bxslider.com/examples/auto-show-start-stop-controls/ -->
+  <!-- 연결 방법 :  https://bxslider.com/install/ -->
+  <div class="bxslider">
+    <div><img src="./imgs/img_mountains_wide.jpg"></div>
+    <div><img src="./imgs/img_nature_wide.jpg"></div>
+    <div><img src="./imgs/img_snow_wide.jpg"></div>
+  </div>
+  <!-- 구글지도 -->
+  <div id="map">
+  </div>
+  <script>
+    //구글 지도
+    let map;
+    let image;
+    let marker;
+
+    function initMap() {
+      map = new google.maps.Map(document.getElementById('map'), {
+        // 37.54629139592949, 126.88069030593695
+        center: { lat: 37.54629139592949, lng: 126.88069030593695 }, //위도 경도
+        zoom: 16 //숫자클수록 지도가 자세히보임
+      });
+
+      image = new google.maps.MarkerImage('http://www.larva.re.kr/home/img/boximage3.png',
+        new google.maps.Size(100, 100),
+        '',
+        '',
+        new google.maps.Size(100, 100));
+      marker = new google.maps.Marker({
+        position: { lat: 37.54629139592949, lng: 126.88069030593695 }, // 마커가 위치할 위도와 경도(변수)
+        map: map,
+        icon: image, // 마커로 사용할 이미지(변수)
+        title: 'RAPA' // 마커에 마우스 포인트를 갖다댔을 때 뜨는 타이틀
+      });
+    }
+  </script>
+
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>LightBox</title>
+    <link rel="stylesheet" href="./css/lightbox.css" />
+    <script src="./js/jquery-3.6.0.min.js"> </script>
+    <script src="./js/lightbox-plus-jquery.min.js"> </script>
+    <script>
+        // 이벤트를 연결합니다.
+        $(document).ready(function () {
+          lightbox.option({
+            'resizeDuration': 200,
+            'wrapAround': true
+          })
+        });
+    </script>
+</head>
+<style>
+  a.lb img{
+    width: 200px;
+  }
+</style>
+<body>
+    <a class="lb" data-lightbox="roadtrip" href="./imgs/cat.jpg"><img src="./imgs/cat.jpg" alt=""></a>
+    <a class="lb" data-lightbox="roadtrip" href="./imgs/dog.jpg"><img src="./imgs/dog.jpg" alt=""></a>
+    <a class="lb" data-lightbox="roadtrip" href="./imgs/img1.jpg"><img src="./imgs/img1.jpg" alt=""></a>
+    <a class="lb" data-lightbox="roadtrip" href="./imgs/img2.jpg"><img src="./imgs/img2.jpg" alt=""></a>
+    <a class="lb" data-lightbox="roadtrip" href="./imgs/img3.jpg"><img src="./imgs/img3.jpg" alt=""></a>
+</body>
+</html>

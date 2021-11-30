@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        //[문제1]. document에서 id인 a와 b를 조작하기 위해 객체 생성
+        
+
+        
+        // 문서객체.textContent : 입력된 문자열을 그대로 넣음, innerText 구버전에서 사용
+        // 문서객체.innerHTML : 입력된 문자열을 HTML형식으로 넣음.
+        a.textContent = '<h1>textContent 속성</h1>'
+        b.innerHTML = '<h1>innerHTML 속성</h1>'
+
+        //문서객체.setAttribute(속성 이름, 값) : 특성 속성에 값을 지정함
+        //문서객체.getAttribute(속성 이름) : 특정 속성을 추출함
+        
+        //[문제2]. document에서 .rect 클래스 모두 query 하기
+        
+
+        rects.forEach((rect, index) => {
+          const width = (index + 1) * 100
+          const src = `http://placekitten.com/${width}/300`
+          rect.setAttribute('src', src)  //rect.src = src 동일
+        })
+
+        // style 적용하기
+        const divs = document.querySelectorAll('body > div.style > div')
+
+        divs.forEach((div, index) => {
+          console.log(div, index)
+          const val = index * 5
+          div.style.height = `10px`  //단위 꼭 붙이기
+          div.style.backgroundColor = `rgba(${val+100}, ${val}, ${val})` 
+        })
+      })
+    </script>
+  </head>
+  <body>
+    <div id="a"></div>
+    <div id="b"></div>
+    <img class="rect">
+    <img class="rect">
+    <img class="rect">
+    <img class="rect">
+    <!-- div 태그 25개 -->
+    <div class="style">
+      <div></div><div></div><div></div><div></div><div></div>
+      <div></div><div></div><div></div><div></div><div></div>
+      <div></div><div></div><div></div><div></div><div></div>
+      <div></div><div></div><div></div><div></div><div></div>
+      <div></div><div></div><div></div><div></div><div></div>
+      <div></div><div></div><div></div><div></div><div></div>
+    </div>
+  </body>
+</html>

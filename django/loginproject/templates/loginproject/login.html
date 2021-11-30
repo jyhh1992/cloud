@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% block content %}
+
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'login.css' %}">
+
+<body >
+    
+    {% if error %}
+    {{ error }}
+    <br>
+    <br>
+    {% endif %}
+    
+    <main  class="form-signin">
+        <div class="text-center" >
+            
+            <form  method="POST" action="{% url 'login'%}">
+                {% csrf_token %}
+                <h1>NAPA</h1>
+                <h1 class="h3 mb-3 fw-normal">Login</h1>
+                    <div class="form-floating">
+                        <input name="username" type="text" class="form-control"value="">
+                        <label for="floatingInput">Username</label>
+                    </div>
+                
+                
+                    <div class="form-floating">
+                        <input name="password"  type="password" class="form-control" value="">
+                        <label for="floatingInput">Password</label>
+                    </div>
+                    <br>
+                    <input class="btn btn-warning w-100 mx-0 mb-2" type="submit" value="Login">
+                    <br>
+            </form>
+            <a href="{% url 'signup' %}" method="POST"  class="btn btn-lg btn-light w-100 mx-0" data-bs-dismiss="modal" >회원가입</a>
+
+            
+        </div>
+    
+    </main>
+    
+    
+</body>
+
+{% endblock %}

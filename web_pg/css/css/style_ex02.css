@@ -1,0 +1,24 @@
+* {margin:0; padding: 0;}
+h1, ul{
+  color: white;
+  background: black;
+}
+h1 {padding: 20px 0px;}
+ul li{
+  padding: 5px 10px;
+  list-style: none;
+}
+/* 자손 선택자 */ 
+div.front > ul > li {  
+  background: blueviolet;
+  color : white
+}
+/* 후손 선택자 */
+div.back li {  
+  background: burlywood;
+  color : red
+}
+/* 멀티 선택자는 개별적으로 지정 */
+div > h1, div > h2{
+  color: greenyellow;
+}

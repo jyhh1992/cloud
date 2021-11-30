@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script src="./js/jquery-3.6.0.min.js"></script>
+  <title>Document</title>
+  <style>
+    .box {
+      position: relative;
+      width: 100; height: 100;
+    }
+    .red-ball{
+      position: relative; 
+      /*position: absolute; */
+      top:0;
+      left:0; 
+      width:15px;
+      height:15px;
+      background:red;
+      transform: translate(-50%, -50%);
+  }
+  </style>
+  <script>
+    $(document).mousemove(function (e) {
+      $('.red-ball').css("top", e.pageY);
+      $('.red-ball').css("left", e.pageX);
+    });
+  </script>
+</head>
+<body>
+<div class="red-ball"></div>
+</body>
+</html>

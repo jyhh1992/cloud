@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Jquery : javascript library</title>
+</head>
+<body>
+  <h2>This is a heading</h2>
+  <p>This is a paragraph.</p>
+  <p>This is another paragraph.</p>
+  <button>Click me</button>
+</body>
+</html>
+<script>
+/*
+1. jQuery 특징
+ - jQuery는 자바스크립트 라이브러리
+ - javascript 프로그래밍을 많이 단순화하여 쉽게 사용할 수 있도록함
+ - 적게 작성하고 더 많이 수행한다.
+ - ajax 호출 및 DOM 조작을 단순화 함
+
+2. jQuery 라이브러리 다운 및 추가
+ - jQuery.com
+ - CDN(Content Delivery Network) jQuery 사용
+
+3. 라이브러리 사용
+ - jQuery를 사용하면 HTML 요소를 선택(쿼리)
+ - 해당 요소에 대해 "작업"을 수행
+
+4. jQuery 구문
+ - HTML 요소 선택, 작업수행
+ - 기본 문법
+  $(selector).액션()
+ - 예)
+   $(this).hide() : 현재 요소 숨김
+   $("p").hide() : 모든 <p> 요소 숨김
+   $(".test").hide() : class="test"인 요소를 숨김
+   $("#test").hide() : id="test"인 요소를 숨김
+
+5. jQuery doc ready event
+// page document 로드가 완료되기 전에 jQuery코드가 실행되는 것을 방지하기 위한 것임.
+
+1) 방법1
+$(document).ready(function(){
+  // jQuery methods go here ...
+})
+
+2) 방법2
+$(function(){
+  // jQuery methods go here ...
+})
+*/
+
+</script>
+<!--script src="./js/jquery-3.6.0.slim.min.js"></script-->
+<!--script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $("p").hide();
+  });
+});
+</script>

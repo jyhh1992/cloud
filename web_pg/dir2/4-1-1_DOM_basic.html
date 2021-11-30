@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM_basic</title>
+    <script>
+      // HTML 태그를 쉽게 만들 수 있는 콜백 함수를 선언
+      // 콜백함수 : 함수를 변수에 저장하고, 그 변수를 함수의 인수로 사용하여 다른 함수의 매개변수에 전달하는 함수
+      // =>(arrow function) 함수 참고 : https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Functions/Arrow_functions
+      const $h1 = (text_str) => `<h1>${text_str}</h1>`
+    </script>
+    <script>
+      // 기본적으로 head 태그 내부에서 body 태그에 있는 문서객체에 접근할 수 없음.
+      // 뷰포트에 h1이 생성되지 않음.
+      document.body.innerHTML += $h1('1번째 script 태그(head안)')
+    </script>
+  </head>
+  <body>
+    <script>
+      document.body.innerHTML += $h1('2번째 script 태그')
+    </script>
+    <h1> body 1번째 h1 태그</h1>
+    <script>
+      document.body.innerHTML += $h1('3번째 script 태그')
+    </script>
+    <h1>body 2번째 h2 태그</h1>
+  </body>
+</html>

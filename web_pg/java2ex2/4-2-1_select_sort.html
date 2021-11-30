@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <!-- 들여쓰기 자동 정리 
+    - shift+Alt+F : 문서 전체 정렬 
+    - ctrl + k -> ctrl +f : 선택 영역만 정렬  -->
+  <!-- Material Design Icons(확장 모듈 설치) : 아아콘 모양 바꾸기  -->
+<head>
+  <title>실습 4-2-2 선택 정렬</title>
+  <meta charset="utf-8" />
+</head>
+
+<body>
+  <form name="inputForm">
+    <div>
+      선택 정렬
+    </div>
+    <div>
+      <input name="str" type="text" size="50" />
+      <input type="button" value="정렬하기" onClick="doSort()" />
+    </div>
+  </form>
+  <form name="outputForm">
+    <div>
+      정렬 결과
+    </div>
+    <div>
+      <textarea name="result" rows="20" cols="50"></textarea>
+    </div>
+  </form>
+  <script>
+    function doSort() {
+      let $input = document.forms.inputForm
+      let $output = document.forms.outputForm
+      let ary = $input.str.value.split(",")
+      ary = ary.map(function (e) {
+        return Number(e)
+      });
+      $output.result.value = ary.join(' ') + '\n'
+      $output.result.value = $output.result.value + "---" + '\n'
+      selectionSort(ary);
+      $output.result.value = $output.result.value + "---" + '\n'
+      printAry(ary);
+      $output.result.value = $output.result.value + "done!" + '\n'
+      // 함수 selectionSort(ary)
+      //      입력: ary 정렬 전의 배열
+      //      출력: 없음(ary의 내용이 정렬됨)
+      function selectionSort(arr) {
+        const arrLen = arr.length
+        for (let i = 0; i < arrLen-1; i++) {
+          let minIdx = i; // 작은 값이 있는 인덱스
+          for (let j = i + 1; j < arrLen; j++) {
+            // 기준값인 minIdx의 위치 값보다 작은 값이면 minIdx에 j를 대입
+            if (arr[minIdx] > arr[j]) minIdx = j            
+            printAry(arr); // 중간값 출력
+          }
+          if(arr[i] !== arr[minIdx]){
+            [arr[minIdx], arr[i]] = [arr[i], arr[minIdx]]
+          }
+        }
+        return arr
+      }
+      // 함수 printAry(ary)
+      //      입력: ary 표시할 배열
+      //      출력: 없음
+      function printAry(ary) {
+        $output.result.value = $output.result.value + ary.join(' ') + '\n'
+      }
+    }
+  </script>
+</body>
+
+</html>

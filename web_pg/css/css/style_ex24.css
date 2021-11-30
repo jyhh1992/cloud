@@ -1,0 +1,50 @@
+div.nav{
+  overflow:hidden;
+  position: relative;
+  left: 10px;
+  /* width: 1000px; */
+  /* height: 40px; */
+  margin-bottom: 10px;
+  padding:10px;
+  /* width: calc(100% - 100px); */
+  border-bottom: 2px solid rgb(206, 206, 206);
+
+}
+
+div.nav li {
+  list-style-type: none;
+  float:left; 
+  /* display: inline-block; */
+  padding: 10px 5px;
+}
+
+/* div.section{
+  width:1000px;
+} */
+
+div.cnt {
+  position:relative;
+  width: 400px; height: 150px;
+  border: 5px solid tomato;
+  overflow: auto;
+  resize: both;
+}
+.box { 
+  width: 100px; height: 100px;
+  position: absolute;
+}
+.box:nth-child(1) {
+  background-color: red;
+  left: 10px; top: 10px;
+  z-index: 100;
+}
+.box:nth-child(2) {
+  background-color: green;
+  left: 50px; top: 50px;
+  z-index: 10;
+}
+.box:nth-child(3) {
+  background-color: blue;
+  left: 90px; top: 90px;
+  z-index: 1;
+}

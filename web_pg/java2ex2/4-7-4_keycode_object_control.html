@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>키보드로 별 움직이기</title>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        // 별의 초기 설정
+        const star = document.querySelector('h1')
+        star.style.position = 'absolute'
+        star.style.color = 'blue'
+        star.style.fontSize = '30pt'
+        // 별의 좌표를 출력하기 위한 요소
+        const $h2 =  document.querySelector('h2')
+        
+        // 별의 이동을 출력하는 기능
+        let [x, y] = [0, 0]
+        const block = 20
+        const print = () => {
+          star.style.left = `${x * block}px`
+          star.style.top = `${y * block}px`
+        }
+        print()
+
+        // 별을 이동하는 기능
+        const [left, up, right, down] = [37, 38, 39, 40]
+        document.body.addEventListener('keydown', (event) => {
+          switch (event.keyCode) {
+            case left:
+              x -= 1
+              break
+            case up:
+              y -= 1
+              break
+            case right:
+              x += 1
+              break
+            case down:
+              y += 1
+              break
+          }
+          $h2.textContent = `별의 위치: (${x*20}, ${y*20})`
+          print()
+        })
+      })
+    </script>
+    <style>
+      * {padding: 0px; margin: 0px;}
+    </style>
+  </head>
+  <body>
+    <h2>별의 위치: (0, 0)</h2>
+    <h1>★</h1>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOMContentLoaded</title>
+    <script>
+      // 문서 객체를 모두 읽어 들이면, 실행됨
+      // 참고 : https://www.w3schools.com/jsref/met_element_addeventlistener.asp
+      document.addEventListener('DOMContentLoaded', () => {
+        // callback 함수 정의
+        const $h1 = (text_str) => `<h1>${text_str}</h1>`
+        // callback 함수 실행
+        document.body.innerHTML += $h1('1번째 script 태그(head안)')
+        document.body.innerHTML += $h1('2번째 script 태그(head안)')
+      })
+    </script>
+  </head>
+  <body>
+    <h1>1번째 h1 태그</h1>
+    <h1>2번째 h2 태그</h1>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+div:nth-child(1) {
+  width: 100px; height: 100px;
+  background-color: red;
+
+  /* margin: 위 오른쪽 아래 왼쪽 */
+  /* padding: 위 오른쪽 아래 왼쪽 */
+  margin: 10px 20px 30px 40px;
+  padding: 20px 30px;
+  border : 20px solid black;
+}
+div:nth-child(2) {
+  width: 100px; height: 100px;
+  background-color: rgb(0, 102, 255);
+
+  /* margin: (위 아래) (오른쪽 왼쪽) */
+  /* padding: (위 아래) (오른쪽 왼쪽) */
+  margin: 20px 30px;
+  padding: 20px 30px;
+  border : 20px dotted black;
+}
+div:nth-child(3) {
+  width: 100px; height: 100px;
+  background-color: rgb(251, 255, 0);
+
+  /* margin: (위 아래) (오른쪽 왼쪽) */
+  /* padding: (위 아래) (오른쪽 왼쪽) */
+  margin: 30px;
+  padding: 20px;
+  border : 20px dashed black;
+}

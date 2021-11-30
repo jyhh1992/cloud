@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <script>
+     // tag에서 onload로 function call 
+      function myFunction(){
+        const $header = document.querySelector('h1')
+
+        // 텍스트와 스타일을 변경함
+        $header.textContent = 'HEADERS'
+        $header.style.color = 'white'
+        $header.style.backgroundColor = 'black'
+        $header.style.padding = '10px'
+      }
+    </script>
+  </head>
+  <body onload="myFunction()">
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+
+  </body>
+</html>

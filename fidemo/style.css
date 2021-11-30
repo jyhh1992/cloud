@@ -1,0 +1,86 @@
+*{
+    padding: 0;
+    margin: 0;
+    
+}
+#game{
+    width: 400px;
+    height: 500px;
+    background-color: gray;
+    border: 1px solid black;
+    margin: auto;
+    overflow: hidden;
+    z-index: 3;    
+}
+#block{
+    width: 50px;
+    height: 500px;
+    background-color: black; z-index:1;
+    position: relative;
+    left: 400px;
+    animation: block 2s infinite linear;
+    
+}
+@keyframes block{
+    0%{left:400px}
+    100%{left:-50px}
+}
+#hole{
+    width: 50px;
+    height: 150px;
+    background-color:gray; z-index:4;
+    position: relative;
+    left: 400px;
+    top: -500px;
+    animation: block 2s infinite linear;
+    
+}
+#character{
+    width: 30px;
+    height: 30px;
+    background-image: url(player.png);
+    background-size: 30px 30px;
+    position: absolute;
+    top: 100px;
+    border-radius: 50%;
+}
+.timer{
+    background-color:#333; width:300px;height:50px;
+    position:fixed;
+  }
+.timer span{
+    display:block;
+    background:repeating-linear-gradient(-45deg, #000, rgba(0, 0, 0, 0) 25px, #FFF 25px, #FFF 50px);
+    width:300px; height:50px;
+    animation:timer 60s linear;
+  }
+.timer span:before{  
+    content:"TIME LEFT";
+    display:block;
+    position:absolute; z-index:3;
+    left:0; 
+    right:0;
+    top:0;
+    bottom:0;
+    text-align:center;
+    line-height:50px;
+    font-size:25px;
+    color:red;
+  }
+  @keyframes timer{
+    0%{width:10px;}
+    100%{width:300px; display:block;}
+    }
+.gameover{
+  position:fixed; z-index:100000; left:0; top:0; bottom:0; right:0; background-color:rgba(0,0,0,0.8);
+  animation:gameover 60s linear forwards;
+  font-size:80px; color:white; font-weight:bold; text-align:center; 
+  text-indent:0;  
+  line-height:500px;
+}
+
+@keyframes gameover{
+0%{left:-5000px;bottom:100%;}
+97%{left:-5000px;bottom:100%;}
+100%{ left:0px;}
+}

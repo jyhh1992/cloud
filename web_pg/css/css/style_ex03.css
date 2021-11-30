@@ -1,0 +1,33 @@
+table {border: 10px solid rgba(0, 0, 0, 0.692);}
+
+table tr{ 
+    background-color: lightgreen;
+    padding: 20px;
+}
+
+table tr th{
+   color: red;
+}
+
+table tr td{
+    background-color: cadetblue;
+
+    color: black;
+}
+
+table td:first-child{
+
+    width: 100px;
+}
+
+table td:nth-child(2){
+    width: 300px;
+}
+
+table td:last-child{
+    width: 200px;
+}
+
+table td:nth-child(2n){
+    background-color: navajowhite;
+}

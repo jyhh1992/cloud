@@ -1,0 +1,18 @@
+.containter{
+  background-color: orange;
+  display: flex;
+  justify-content: center;
+  /* justify-content: flex-start; */
+  border: 2px solid pink;
+}
+.containter .item{
+  width: 100px;
+  height: 100px;
+  background-color: royalblue;
+  border: 2px solid black;
+  box-sizing: border-box;
+  /* text-align: center; */
+  display: flex; /*1차원 레이아웃 기술*/
+  justify-content: center; /*수평정렬*/
+  align-items: center; /*수직정렬*/
+}

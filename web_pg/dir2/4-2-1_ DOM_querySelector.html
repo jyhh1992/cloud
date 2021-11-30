@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <script>
+      // 1. DOMContentLoaded 이벤트 연결
+      document.addEventListener('DOMContentLoaded', () => {
+        // 요소를 읽어들임
+        const $header = document.querySelector('h1')
+
+        // 텍스트와 스타일을 변경함
+        $header.textContent = 'HEADERS'
+        $header.style.color = 'white'
+        $header.style.backgroundColor = 'black'
+        $header.style.padding = '10px'
+      })
+    </script>
+  </head>
+  <body>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+
+  </body>
+</html>

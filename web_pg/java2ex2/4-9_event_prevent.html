@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang='ko'>
+  <head>
+    <title></title>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const imgs = document.querySelectorAll('img')
+       
+        imgs.forEach((img) => {
+          img.addEventListener('contextmenu', (event) => {
+            event.preventDefault()
+          })
+        })
+        //document.oncontextmenu = new Function('return false') // 오른쪽 버튼 메뉴 방지
+        document.ondragstart=new Function('return false')  // 드래그 방지
+        document.onselectstart=new Function('return false')  // 선택 방지
+
+        // 링크활성화 
+        let status = false
+        const checkbox = document.querySelector('input')
+        const site = document.querySelector('a.site')
+        checkbox.addEventListener('change', (event) => {
+          status = event.currentTarget.checked
+          
+        })
+        site.addEventListener('click', (event) => {
+          if(!status){
+            event.preventDefault()
+          }
+        })
+      })
+    </script>
+  </head>
+  <body>
+    <img src="http://placekitten.com/300/300" alt="">
+    <h1>귀여운 고양이</h1>
+    <hr>
+    <input type="checkbox">
+    <span>링크 활성화</span>
+    <br>
+    <a class="site" href="http://www.naver.co.kr">네이버</a>
+  </body>
+</html>

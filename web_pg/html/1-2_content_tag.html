@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML5 첫 시간</title>
+  <style>
+    body, p, h1, h2, h3, h4, h6 { margin: 0; padding: 0;}
+  </style> 
+  <link rel="stylesheet" href="./css/style_01.css">
+</head>
+<body>
+  <!-- 다중커서 : ctl + shift + 방향키, 멀티커서 alt + 마우스 클릭-->
+  <!-- div>ul>li*>a : 여러개의 요소를 랩핑하고 개별 태그로 -->
+  <!-- 블록선택, p* : 개별 요소에 p태그 적용 -->
+  <!-- ctl + shift + l : 현재 커서의 단어 한꺼번 바꾸기  -->
+  <div class="gnb">
+    <h2><a href="#tit1">hello world wide web</a></h2>
+    <h2><a href="#tit2">웹표준 종류: 목록 표현하기</a></h2>
+    <h2><a href="#tit3">좋아하는 과일 순서</a></h2>
+    <h2><a href="#tit4">하이퍼링크</a></h2>
+    <h2><a href="#tit5">이미지 표현하기</a></h2>
+    <h2><a href="#tit6">오디오 표현하기</a></h2>
+    <h2><a href="#tit7">비디오 표현하기</a></h2>
+  </div>
+  
+  <div class="flex_1">
+    <div class="box1 box">
+      <h1 id="tit1">hello world wide web</h1>
+      <h2>웹표준이란?</h2>
+      <p>웹 표준은 월드 와이드 웹의 측면을 서술하고 정의하는 공식 표준이나 다른
+        기술 규격을 가리키는 일반적인 용어이다. ... 이러한 표준들은 직간접적으로 웹 사이트,
+        웹 서비스 개발과 관리에 영향을 주고 있다.
+      </p>
+      <h2>자바스크립트</h2>
+      <p>자바스크립트(영어: JavaScript)는 객체 기반의 스크립트 프로그래밍 언어이다. 이 언어는 웹 브라우저 내에서 주로 사용하며, 다른 응용 프로그램의 내장 객체에도 접근할 수 있는 기능을 가지고 있다. 또한 Node.js와 같은 런타임 환경과 같이 서버 프로그래밍에도 사용되고 있다.</p>
+    </div>
+    <div class="box2 box">
+      <h1 id="tit2">웹표준 종류: 목록 표현하기(unorder list)</h1>
+      <ul>
+        <li>html5</li>
+        <li>css3</li>
+        <li>JavaScript</li>
+        <li>jquery</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="=flex_2">
+    <div>
+      <h1 id="tit3">좋아하는 과일 순서(order list)</h1>
+      <ol>
+        <li>사과</li>
+        <li>배</li>
+        <li>오렌지</li>
+        <li>망고</li>
+      </ol>
+    </div>
+    <div>
+      <h1 id="tit4">하이퍼링크</h1>
+      <a href="http://www.google.com">google</a><br />
+      <a href="http://naver.com/">네이버</a><br />
+      <a href="http://daum.com/">다음</a><br />
+    </div>
+  </div>
+
+  <div>
+    <h1 id="tit5">이미지 표현하기</h1>
+    <div>
+      <img src="./img/dog.jpg" alt="귀여운 강아지" height="300" />
+      <img src="./img/cat.jpg" alt="예쁜 고양이" height="300" />
+    </div>
+  </div>
+
+  <div>
+    <h1 id="tit6">오디오 표현하기</h1>
+    <div>
+      <p>범내려온다.</p>
+      <audio src="./audio/leenalch_tiger.mp3"  controls="controls"></audio>
+      <p>칼림바</p>
+      <audio controls="controls">
+        <source src="./audio/Kalimba.mp3" type="audio/mp3" />
+        <source src="./audio/Kalimba.ogg" type="audio/ogg" />
+    </audio>
+    </div>
+  </div>
+  <div>
+    <h1 id="tit7">비디오 콘텐츠</h1>
+    <div>
+      <video width="640" controls="controls" poster="wildlife.png">
+        <source src="./video/wildlife.mp4" type="video/mp4" />
+        <source src="./video/wildlife.webm" type="video/webm" />
+      </video>
+    </div>
+    <iframe width="600" height="400" src="https://www.youtube.com/embed/62EjbCDPYlk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+  <div>
+    <h1>시간표</h1>
+    <table border="1">
+      <thead>
+          <tr>
+              <th></th>
+              <th>월</th>
+              <th>화</th>
+              <th>수</th>
+              <th>목</th>
+              <th>금</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td>1교시</td>
+              <td>영어</td>
+              <td>국어</td>
+              <td>과학</td>
+              <td>미술</td>
+              <td>기술</td>
+          </tr>
+          <tr>
+              <td>2교시</td>
+              <td>도덕</td>
+              <td>체육</td>
+              <td>영어</td>
+              <td>수학</td>
+              <td>사회</td>
+          </tr>
+      </tbody>
+    </table>
+  </div>
+  <div>
+    <h1>지역의 차 종류</h1>
+    <table border="1">
+      <tr>
+          <th colspan="2">지역별 홍차</th>
+      </tr>
+      <tr>
+          <th rowspan="3">중국</th>
+          <td>정산소종</td>
+      </tr>
+      <tr><td>기문</td></tr>
+      <tr><td>운남</td></tr>
+      <tr>
+          <th rowspan="4">인도 및 스리랑카</th>
+          <td>아삼</td>
+      </tr>
+      <tr><td>실론</td></tr>
+      <tr><td>다질링</td></tr>
+      <tr><td>닐기리</td></tr>
+    </table>
+  </div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>Event Model</title>
+    <meta content="text/html; charset=utf-8">
+    <script>
+      // focus 이벤트와 blur이벤트를 사용해 글자수 카운트 오류 해결
+      // focus 이벤트 : 입력 양식에 초점을 맞춘(활성화 상태) 경우 발생
+      // blur 이벤트 : 초점을 해제 할 경우(비활성화 상태)에 발생
+      document.addEventListener('DOMContentLoaded', () => {
+        const $textarea = document.querySelector('textarea')
+        const $h1 = document.querySelector('h1')
+        let timerId
+
+        $textarea.addEventListener('focus', (event) => {
+          timerId = setInterval(() => {
+            const length = $textarea.value.length
+            $h1.textContent = `글자 수: ${length}`
+          }, 50)
+        })
+        $textarea.addEventListener('blur', (event) => {
+          clearInterval(timerId)
+        })
+      })
+    </script>
+    <style>
+      li, p { font-size: 16pt;}
+    </style>
+  </head>
+  <body>
+    <h1>현재 글자수 : 0</h1>
+    <textarea></textarea>
+    <h1>이벤트 모델 : 이벤트를 연결하는 방법</h1>
+    <h2> addEventListener() 메소 사용, 표준 이벤트 모델</h2>
+    <ul>
+      <li>keydown : 키가 눌릴때 실행</li>
+      <li>keypress : 키가 입력되었을 때 실행됨</li>      
+      <li>keyup : 키보드에서 키가 떨어질 때 실행</li>
+    </ul>
+    <p>keydown과 keypress는 웹브라우저에 따라 아시아권의 문자를 제대로 처리하지 못해 일반적으로 keyup이벤트 사용</p>
+  </body>
+</html>

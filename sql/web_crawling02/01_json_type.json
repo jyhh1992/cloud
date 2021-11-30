@@ -1,0 +1,136 @@
+// json type 파일의 시작 { "key":"value"}
+// json type 파일의 시작 { "key":[{"key1":"value1", "key2":"value2"}, {"key3":"value3", "key4":"value4"}}
+{
+  "data": [
+    {
+      "rank": 1,
+      "rankChange": 0,
+      "symbolCode": "A035720",
+      "code": "KR7035720002",
+      "name": "카카오",
+      "tradePrice": 124000,
+      "change": "FALL",
+      "changePrice": 500,
+      "changeRate": 0.0040160643,
+      "chartSlideImage": null,
+      "isNew": false
+    },
+    {
+      "rank": 2,
+      "rankChange": 0,
+      "symbolCode": "A005930",
+      "code": "KR7005930003",
+      "name": "삼성전자",
+      "tradePrice": 76600,
+      "change": "RISE",
+      "changePrice": 300,
+      "changeRate": 0.003931848,
+      "chartSlideImage": null,
+      "isNew": false
+    },
+    {
+      "rank": 3,
+      "rankChange": 0,
+      "symbolCode": "A323410",
+      "code": "KR7323410001",
+      "name": "카카오뱅크",
+      "tradePrice": 69700,
+      "change": "RISE",
+      "changePrice": 5100,
+      "changeRate": 0.0789473684,
+      "chartSlideImage": null,
+      "isNew": false
+    },
+    {
+      "rank": 4,
+      "rankChange": 1,
+      "symbolCode": "A112040",
+      "code": "KR7112040001",
+      "name": "위메이드",
+      "tradePrice": 74400,
+      "change": "RISE",
+      "changePrice": 15400,
+      "changeRate": 0.2610169492,
+      "chartSlideImage": null,
+      "isNew": false
+    },
+    {
+      "rank": 5,
+      "rankChange": -1,
+      "symbolCode": "A247540",
+      "code": "KR7247540008",
+      "name": "에코프로비엠",
+      "tradePrice": 436800,
+      "change": "RISE",
+      "changePrice": 33600,
+      "changeRate": 0.0833333333,
+      "chartSlideImage": null,
+      "isNew": false
+    },
+    {
+      "rank": 6,
+      "rankChange": 2,
+      "symbolCode": "A302440",
+      "code": "KR7302440003",
+      "name": "SK바이오사이언스",
+      "tradePrice": 276500,
+      "change": "FALL",
+      "changePrice": 13000,
+      "changeRate": 0.0449050086,
+      "chartSlideImage": null,
+      "isNew": false
+    },
+    {
+      "rank": 7,
+      "rankChange": -1,
+      "symbolCode": "A068270",
+      "code": "KR7068270008",
+      "name": "셀트리온",
+      "tradePrice": 263000,
+      "change": "RISE",
+      "changePrice": 1000,
+      "changeRate": 0.0038167939,
+      "chartSlideImage": null,
+      "isNew": false
+    },
+    {
+      "rank": 8,
+      "rankChange": 1,
+      "symbolCode": "A035420",
+      "code": "KR7035420009",
+      "name": "NAVER",
+      "tradePrice": 402500,
+      "change": "FALL",
+      "changePrice": 5500,
+      "changeRate": 0.0134803922,
+      "chartSlideImage": null,
+      "isNew": false
+    },
+    {
+      "rank": 9,
+      "rankChange": 0,
+      "symbolCode": "A352910",
+      "code": "KR7352910004",
+      "name": "오비고",
+      "tradePrice": 19800,
+      "change": "RISE",
+      "changePrice": 50,
+      "changeRate": 0.0025316456,
+      "chartSlideImage": null,
+      "isNew": true
+    },
+    {
+      "rank": 10,
+      "rankChange": -3,
+      "symbolCode": "A028300",
+      "code": "KR7028300002",
+      "name": "에이치엘비",
+      "tradePrice": 61100,
+      "change": "FALL",
+      "changePrice": 4200,
+      "changeRate": 0.0643185299,
+      "chartSlideImage": null,
+      "isNew": false
+    }
+  ]
+}

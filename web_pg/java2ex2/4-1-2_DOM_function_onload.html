@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM element onload</title>
+    <script>
+      // HTML 태그를 쉽게 만들 수 있는 콜백 함수를 선언
+      // 콜백함수 : 함수를 변수에 저장하고, 그 변수를 함수의 인수로 사용하여 다른 함수의 매개변수에 전달하는 함수
+      // =>(arrow function) 함수 참고 : https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Functions/Arrow_functions
+      
+      // 참고 : https://www.w3schools.com/tags/ev_onload.asp
+      function myFunction(){
+       // callback 함수 정의
+        const $h1 = (text) => `<h1>${text}</h1>`
+        // callback 함수 실행
+        document.body.innerHTML += $h1('1번째 script 태그(head안)')
+        document.body.innerHTML += $h1('2번째 script 태그(head안)')
+      }
+    </script>
+  </head>
+  <body onload ="myFunction()">
+    <h1>1번째 h1 태그</h1>
+    <h1>2번째 h2 태그</h1>
+  </body>
+</html>

@@ -1,0 +1,54 @@
+body {
+    margin: 0 auto;
+    background-image: url('../imgs/E8P68QqVgAIOhS6.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+div#content{
+    width: 1000px;
+    margin: 0 auto;
+}
+
+div#content h2{
+    margin: 20px;
+    
+}
+
+div#sidebar >ul{
+    display: flex;
+}
+
+div#sidebar > ul > li{
+    list-style:none;
+    padding : 5px;
+  }
+
+div#sidebar > ul > li >a{
+    color: white;
+}
+
+div > .apps{
+    margin-right: 10px;
+}
+
+div > .apps > li {
+    background-color: aquamarine;
+    margin-bottom: 10px;
+    padding: 10px;
+    list-style:none;
+  }
+  div > .apps > li > a{
+    
+    font-size: 20px;
+    color:black;
+  }
+  div > .apps > li > a:link{
+    text-decoration: none;
+  }
+  div > .apps > li > a:hover{
+    color : purple
+  }
+
+  /* div > #polls_quest{
+
+  } */

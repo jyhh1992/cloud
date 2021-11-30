@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'open.css' %}">
+
+<body>
+    <section class="split">
+        <div class="screen">
+            <div class="content">
+                <h2>탄소 배출과 쓰레기</h2>
+                <p>지구는 지금 파괴되고있습니다</p>
+            </div>
+        </div>
+
+        <div class="screen">
+            <div class="content">
+                <h2>늘어나는 자연재해</h2>
+                <p>인류에게 위협이 증가되고 있습니다</p>
+            </div>
+        </div>
+
+        <div class="screen">
+            <div class="content">
+                <h2>보존해야하는 지구</h2>
+                <a href="{% url 'login' %}" method="POST"  class="btn btn-danger w-100 mx-0 mb-2"  >지금 지구를 구해주세요</a>
+            </div>
+        </div>    
+  
+    </section>
+</body>
+
+{% endblock %}

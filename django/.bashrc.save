@@ -1,0 +1,1 @@
+alias dj=‘source /home/rapa00/django/VENV/bin/activate; cd /home/cozlab/django’

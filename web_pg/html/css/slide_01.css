@@ -1,0 +1,17 @@
+body{
+    width: 1000px;
+    margin: 0 auto;
+}
+
+div.bx-controls-auto,div.bx-pager{
+    display: none;
+}
+
+a.lb img{
+    width: 100px;
+    
+}
+div#map{
+width:500px;
+height:500px;
+}

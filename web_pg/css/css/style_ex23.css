@@ -1,0 +1,31 @@
+div.cnt {
+  position:relative;
+  width: 400px; height: 150px;
+  border: 5px solid tomato;
+  /* overflow: hidden; */
+  /* overflow: scroll; */
+  /* overflow-y: scroll; */
+  /* overflow-x: scroll; */
+  overflow: auto;
+  resize: both;
+
+}
+.box { 
+  width: 100px; height: 100px;
+  position: absolute;
+}
+.box:nth-child(1) {
+  background-color: red;
+  left: 10px; top: 10px;
+  z-index: 100;
+}
+.box:nth-child(2) {
+  background-color: green;
+  left: 50px; top: 50px;
+  z-index: 10;
+}
+.box:nth-child(3) {
+  background-color: blue;
+  left: 90px; top: 90px;
+  z-index: 1;
+}

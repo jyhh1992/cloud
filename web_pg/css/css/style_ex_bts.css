@@ -1,0 +1,21 @@
+.container {
+/* 재때재때 정리하자*/  
+  background-color: orange;
+  width: 300px;
+  margin:auto;
+  display: flex;
+  justify-content: center;
+}
+
+
+.btn {
+  display: inline-block;
+  padding: 20px;
+  background-color: cornflowerblue; 
+  color:aliceblue;
+  font-size: 20px;
+  border-radius: 10px;
+  border: 2px solid gray;
+  cursor: pointer;
+}
+

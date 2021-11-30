@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+<body>
+    <div class="modal modal-sheet position-static d-block bg-secondary py-5" tabindex="-1" role="dialog" id="modalSheet">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content rounded-6 shadow">
+            <div class="modal-header border-bottom-0">
+              <h5 class="modal-title">로그인에 성공</h5>
+              
+            </div>
+            <div class="modal-body py-0">
+              <p>세계환경 파괴를 막기위해서 당신의 힘이 필요합니다 참여하시겠습니까?</p>
+            </div>
+            <div class="modal-footer flex-column border-top-0">
+                
+              <a href="{% url 'tuto' %}" method="POST" class="btn btn-lg btn-primary w-100 mx-0 mb-2" >
+                참여한다
+              </a>
+                
+              <a href="{% url 'logout' %}" method="POST"  class="btn btn-lg btn-light w-100 mx-0" data-bs-dismiss="modal" >거부한다</a>
+           
+            </div>
+          </div>
+        </div>
+      </div>
+    
+</body>
+
+
+
+
+{% endblock %}

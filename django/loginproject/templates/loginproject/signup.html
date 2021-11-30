@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block content %}
+
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'login.css' %}">
+
+
+<body>
+    <main  class="form-signin">
+        <div class="text-center" >
+            <h1>회원가입 페이지 </h1>
+            
+            <form action="{% url 'signup' %}" method="POST" >
+                {% csrf_token %}
+                   
+                    <div class="form-floating"> 
+                        <input name='username' type='text' class="form-control" value=''>
+                        <label for="floatingInput">Username</label>
+                    </div>
+                    
+                    <div  class="form-floating">
+                        <input name='password1' type="password"  class="form-control" value=''>
+                        <label for="floatingInput">Password</label>
+                    </div>
+
+                    <div class="form-floating">
+                        <input name='password2' type="password" class="form-control" value=''>
+                        <label for="floatingInput">confirm</label>
+                    </div>
+                    
+                    <input class='btn btn-danger w-100 mx-0 mb-2' type="submit" value="signup">
+            </form>
+            <a href="{% url 'login' %}" method="POST"  class="btn btn-lg btn-light w-100 mx-0" data-bs-dismiss="modal" >뒤로가기</a>
+        </div>
+
+    </main>
+
+</body>
+  
+
+{% endblock %}

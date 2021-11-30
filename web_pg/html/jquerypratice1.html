@@ -1,0 +1,81 @@
+<html>
+
+<head>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key= AIzaSyAldD3rTuFpx4GmctKZ_ZvcRmpXe2LLLbc&callback=initMap" async defer></script>
+  
+
+  <link rel="stylesheet" href="./css/lightbox.css">
+  <script src="./js/lightbox.js"></script>
+  <link rel="stylesheet" href="./css/slide_01.css">
+
+  <script>
+    $(document).ready(function () {
+      $(function () {
+        $('.bxslider').bxSlider({
+          auto: true,
+          autoControls: true,
+          stopAutoOnClick: true,
+          pager: true,
+          slideWidth: 600
+        });
+      });
+
+
+    });
+
+
+  </script>
+
+
+</head>
+
+<body>
+
+  <div class="bxslider">
+    <div><img src="/html/img/cat.jpg" title="Funky roots"></div>
+    <div><img src="/html/img/dog.jpg" title="The long and winding road"></div>
+    <div><img src="/html/img/wildlife.png" title="Happy trees"></div>
+  </div>
+
+  <div class="light">
+    <a class='lb' data-lightbox="roadtrip" href="./img/cat.jpg"><img src="./img/cat.jpg" alt=""></a>
+    <a class='lb' data-lightbox="roadtrip" href="./img/cat.jpg"><img src="./img/cat.jpg" alt=""></a>
+    <a class='lb' data-lightbox="roadtrip" href="./img/cat.jpg"><img src="./img/cat.jpg" alt=""></a>
+  </div>
+  <!-- 구글지도 -->
+  <div id="map">
+  </div>
+  <script>
+    //구글 지도
+    let map;
+    let image;
+    let marker;
+    function initMap() {
+      map = new google.maps.Map(document.getElementById('map'), {
+        // 37.54629139592949, 126.88069030593695
+        center: { lat: 37.54629139592949, lng: 126.88069030593695 }, //위도 경도
+        zoom: 16 //숫자클수록 지도가 자세히보임
+      });
+      image = new google.maps.MarkerImage('http://www.larva.re.kr/home/img/boximage3.png',
+        new google.maps.Size(100, 100),
+        '',
+        '',
+        new google.maps.Size(100, 100));
+      marker = new google.maps.Marker({
+        // 마커가 위치할 위도와 경도(변수)
+        position: { lat: 37.54629139592949, lng: 126.88069030593695 },
+        map: map,
+        icon: image, // 마커로 사용할 이미지(변수)
+        title: 'RAPA' // 마커에 마우스 포인트를 갖다댔을 때 뜨는 타이틀
+      });
+    }
+  </script>
+  <!-- <script src="./js/lightbox-plus-jquery.min.js"></script> -->
+</body>
+
+</html>

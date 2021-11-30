@@ -1,0 +1,18 @@
+h1, ul{
+  color: white;
+  background: black;
+}
+h1 {padding: 20px 0px;}
+li {
+  background: beige;
+  list-style: none;
+  padding: 5px 10px;
+}
+.sel {
+  font-size: 20pt;
+  color: cornflowerblue;
+  font-weight:bold;
+}
+.nosel {
+  color:palevioletred;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>실습 4-2-3 정렬</title>
+  <meta charset="utf-8" />
+</head>
+
+<body>
+  <form name="inputForm">
+    <div>
+      정렬
+    </div>
+    <div>
+      <input name="str" type="text" size="50" />
+      <input type="button" value="정렬하기" onClick="doSort()" />
+    </div>
+  </form>
+  <form name="outputForm">
+    <div>
+      정렬 결과
+    </div>
+    <div>
+      <textarea name="result" rows="20" cols="50"></textarea>
+    </div>
+  </form>
+  <script>
+    function doSort() {
+      let $input = document.forms.inputForm
+      let $output = document.forms.outputForm
+      let ary = inputForm.str.value.split(",")
+      ary = ary.map(function (e) {
+        return Number(e)
+      })
+      
+      // 자바스크립트 기본 정렬 
+      arr = ary.sort(function(a, b){return a-b})
+      $output.result.value = arr
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Single+Day&display=swap'); */
+@font-face { 
+  font-family: 'NanumBarunGothic';
+  src: url('/fonts/NanumBarunGothic.eot');
+  src: url('/fonts/NanumBarunGothic.eot') format('embedded-opentype'),
+       url('/fonts/NanumBarunGothic.woff') format('woff');
+}
+
+
+body {
+  background-color: #E7E7E8;
+  background-image: url('./imgs/BackgroundFront.png'), url('./imgs/BackgroundBack.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  /* background-attachment: scroll; */
+  /* background-position: bottom; */
+  /* background-position: 0px 50%; */
+}
+
+div p {
+  font-family:Arial, Helvetica, sans-serif;
+  font-size: 12pt;
+}
+
+div p.new1{
+  font-family: 'Single Day', cursive;
+  font-style: italic;
+}
+div p.new2{
+  font-family: 'NanumBarunGothic', 'serif';
+
+}

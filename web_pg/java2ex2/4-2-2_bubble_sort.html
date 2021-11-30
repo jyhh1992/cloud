@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>실습 4-2-1 버블 정렬</title>
+  <meta charset="utf-8" />
+</head>
+
+<body>
+  <form name="inputForm">
+    <div>
+      버블 정렬
+    </div>
+    <div>
+      <input name="str" type="text" size="50" />
+      <input type="button" value="정렬하기" onClick="doSort()" />
+    </div>
+  </form>
+  <form name="outputForm">
+    <div>
+      정렬 결과
+    </div>
+    <div>
+      <textarea name="result" rows="20" cols="50"></textarea>
+    </div>
+  </form>
+  <script>
+    function doSort() {
+      let $input = document.forms.inputForm
+      let $output = document.forms.outputForm
+      let ary = inputForm.str.value.split(",")
+      ary = ary.map(function (e) {
+        return Number(e)
+      })
+      $output.result.value = ary.join(' ') + '\n'
+      $output.result.value = $output.result.value + "---" + '\n'
+      bubbleSort(ary)
+      $output.result.value = $output.result.value + "---" + '\n'
+      printAry(ary)
+      $output.result.value = $output.result.value + "done!" + '\n'
+      // 함수 bubbleSort(ary)
+      //      입력: ary 정렬 전의 배열
+      //      출력: 없음(ary의 내용이 정렬됨)
+      function bubbleSort(arr) {
+        const arrLen = arr.length;
+        for (let i = 0; i < arrLen - 1; i++) {
+          for (let j = i+1; j < arrLen - i; j++) {
+            if (arr[j-1] > arr[j]) {
+              //javascript swapping 기능 : [a, b] = [b, a]
+              [arr[j], arr[j - 1]] = [arr[j - 1], arr[j]]
+            }
+            printAry(arr)
+          }
+
+        }
+        return arr
+      }
+      // 함수 printAry(ary)
+      //      입력: ary 표시할 배열
+      //      출력: 없음
+      function printAry(ary) {
+        $output.result.value = $output.result.value + ary.join(' ') + '\n'
+      }
+    }
+  </script>
+</body>
+</html>

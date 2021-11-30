@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const $h1 = document.querySelector('h1')
+        const print = (event) => {
+          let output = ''
+          output += `alt: ${event.altKey}<br>`
+          output += `ctrl: ${event.ctrlKey}<br>`
+          output += `shift: ${event.shiftKey}<br>`
+          output += `code: ${typeof(event.code) !== 'undefined' ? 
+            event.code : event.keyCode}<br>`
+        $h1.innerHTML = output
+       
+        }
+        document.addEventListener('keydown', print)  // 키가 눌릴 때 출력
+        document.addEventListener('keyup', print)    // 키가 떨어질 때 출력
+      })
+    </script>
+  </head>
+  <body>
+    <h1>키보드 아무키나 눌러주세요.</h1>
+    <br>
+    <h2><a href="https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/code/code_values">- 키보드 code 속성값 확인</a></h2>
+    <h2><a href="https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/keyCode">- `키보드 keyCode 속성 값 확인</a></h2>
+  </body>
+</html>

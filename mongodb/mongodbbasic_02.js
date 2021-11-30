@@ -1,0 +1,45 @@
+// db.getCollection('users').find({})
+
+// db.users.renameCollection("people")
+
+// db.employees.renameCollection("people")
+
+// db.people.find({ }, { user_id: 1, status: 1 })
+// db.people.find({ },{ user_id: 1, status: 1, _id: 0 })
+// db.people.find({ status: "A" })
+// db.people.find({ $or: [ { status: "A" } , { age: 50 } ] })
+
+// db.people.find({ user_id: "AB001" },{ user_id: 1, age:1,status: 1 } )
+
+// db.people.find({ age: { $gt: 25 } })
+// db.people.find({ age: { $lte: 25 } })
+// db.people.find({ age: { $gt: 25, $lte: 40 } })
+// db.people.find( { age: { $nin: [ 35 ] } } ))
+
+// db.people.find( { user_id: /AB/ } )
+// db.people.find( { user_id: { $regex: /^BB/ } } )
+// db.people.find( { status: "A" } ).sort( { user_id: 1 } )
+
+// db.people.count()
+// db.people.find().count()
+
+// db.people.count( { user_id: { $exists: true } } )
+
+// db.people.find( { age: { $gt: 30 } } ).count()                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+
+// db.people.updateMany( { age: { $lte: 40 } }, { $set: { status: "D" } } )
+
+// db.people.find()
+// db.people.updateOne({ age: { $gt: 35 } }, { $set: { status: "A" } } )
+// db.people.find()
+
+// db.people.deleteMany({})
+
+// db.people.deleteMany({})
+
+db.knowledge_it.drop()
+
+
+
+
+
